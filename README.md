@@ -52,7 +52,7 @@ durak_game/
 
 1. Клонируйте репозиторий:
 ```bash
-git clone https://github.com/ваш-логин/durak-card-game.git
+git clone https://github.com/ArtDmitt/durak-card-game.git
 cd durak-card-game
 ```
 
@@ -84,7 +84,7 @@ brew install sfml cmake
 
 2. Клонируйте репозиторий и соберите проект:
 ```bash
-git clone https://github.com/ваш-логин/durak-card-game.git
+git clone https://github.com/ArtDmitt/durak-card-game.git
 cd durak-card-game
 mkdir build && cd build
 cmake ..
@@ -171,7 +171,7 @@ cmake --build . --config Release
 
 ## 👨‍💻 Автор
 
-Артем - [GitHub](https://github.com/ваш-логин)
+Артём - [GitHub](https://github.com/ваш-логин)
 
 ## 📄 Лицензия
 
