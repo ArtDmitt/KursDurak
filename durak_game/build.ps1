@@ -1,4 +1,4 @@
-# Скрипт для сборки проекта
+# Скрипт для сборки проекта с использованием MinGW
 
 # Проверяем, установлен ли SFML
 $sfmlDir = ".\external\SFML"
@@ -16,13 +16,13 @@ if (-not (Test-Path -Path $buildDir)) {
 # Переходим в директорию сборки
 Set-Location -Path $buildDir
 
-# Запускаем CMake для генерации проекта
+# Запускаем CMake для генерации проекта с использованием MinGW
 Write-Host "Генерация проекта с помощью CMake..."
-cmake .. -DSFML_DIR=..\external\SFML\lib\cmake\SFML
+cmake .. -G "MinGW Makefiles" -DSFML_DIR=..\external\SFML\lib\cmake\SFML
 
 # Собираем проект
 Write-Host "Сборка проекта..."
-cmake --build . --config Release
+cmake --build .
 
 # Возвращаемся в корневую директорию
 Set-Location -Path ..
@@ -30,7 +30,7 @@ Set-Location -Path ..
 # Копируем DLL-файлы SFML в директорию с исполняемым файлом
 Write-Host "Копирование DLL-файлов SFML..."
 $dllSource = ".\external\SFML\bin"
-$dllDest = ".\build\bin\Release"
+$dllDest = ".\build\bin"
 
 if (-not (Test-Path -Path $dllDest)) {
     New-Item -Path $dllDest -ItemType Directory -Force
