@@ -1,0 +1,56 @@
+# Папки сборки
+build/
+bin/
+lib/
+out/
+
+# Внешние зависимости
+external/
+
+# Объектные файлы
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Временные файлы компилятора
+*.ilk
+*.pdb
+*.idb
+*.ipdb
+*.iobj
+
+# Кэш и настройки IDE
+.vs/
+.vscode/
+*.user
+*.suo
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+
+# CMake файлы
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+CTestTestfile.cmake
+_deps/
+
+# Система сборки
+Makefile
+*.make
+
+# Прочие временные файлы
+*.log
+*.tlog
+*.tmp
+*~
+
+# Файлы Doxygen
+html/
+latex/ 
